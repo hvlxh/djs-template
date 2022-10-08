@@ -21,7 +21,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/hvlxh/DiscordJS-Handlers">
-    <img src="assets/logo.png" alt="Image">
+    <img src="images/logo.png" alt="Image">
   </a>
   
 <h3 align="center">DiscordJS Handlers</h3>
