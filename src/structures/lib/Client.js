@@ -512,10 +512,10 @@ module.exports = class extends Client {
         for (let folder of folders) {
             const files = Loader(`./src/commands/modal/${folder}`);
             for (let file of files) {
-                const btn = require(`../../commands/modal/${folder}/${file}`);
+                const mdl = require(`../../commands/modal/${folder}/${file}`);
                 const L = `${process.cwd().replace(/\\/g, '/')}/src/commands/modal/${folder}/${file}`;
 
-                if (!btn.id) {
+                if (!mdl.id) {
                     if (files.at(-1) === file) {
                         tableDatas[1][0] += `${L[L.length - 2]}/${L[L.length - 1]}`;
                         tableDatas[1][1] += chalk.red(`Failed`);
@@ -528,7 +528,7 @@ module.exports = class extends Client {
                     continue;
                 };
 
-                if (!btn.response) {
+                if (!mdl.response) {
                     if (files.at(-1) === file) {
                         tableDatas[1][0] += `${L[L.length - 2]}/${L[L.length - 1]}`;
                         tableDatas[1][1] += chalk.red(`Failed`);
@@ -541,12 +541,12 @@ module.exports = class extends Client {
                     continue;
                 }
 
-                this.buttons.set(btn.id, btn);
+                this.modals.set(mdl.id, mdl);
                 if (files.at(-1) === file) {
-                    tableDatas[1][0] += btn.name;
+                    tableDatas[1][0] += mdl.name;
                     tableDatas[1][1] += chalk.green(`Success`);
                 } else {
-                    tableDatas[1][0] += btn.name + '\n';
+                    tableDatas[1][0] += mdl.name + '\n';
                     tableDatas[1][1] += chalk.green(`Success\n`);
                 }
             };
