@@ -13,6 +13,6 @@
     "discord-arts": "^0.0.8",
     "discord-commands-params": "^1.0.1",
     "discord.js": "^14.11.0",
-    "table": "^6.8.0"
+    "table": "^6.8.1"
   }
 }
