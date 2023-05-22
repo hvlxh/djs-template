@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "ascii-table": "^0.0.9",
-    "chalk": "4.0.0",
+    "chalk": "5.2.0",
     "discord-arts": "^0.0.8",
     "discord-commands-params": "^1.0.1",
     "discord.js": "^14.11.0",
