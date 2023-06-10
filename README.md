@@ -5,17 +5,13 @@ An discordjs framework to create commands in most efficient way!
 ## Prerequisites
 
 1. Node (>17.x.x)
-
 2. Git
 
 ## Installation
 
 1. Clone the repo (`git clone https://github.com/hvlxh/djs-framework`)
-
 2. Add the following variables and fill them out in `.env`
-
 3. Install the dependencies (`npm i`)
-
 4. Run the app (`node .`)
 
 ## Contributing
