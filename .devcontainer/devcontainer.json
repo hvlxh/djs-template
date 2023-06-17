@@ -1,0 +1,22 @@
+{
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "LeonardSSH.vscord",
+        "streetsidesoftware.code-spell-checker",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "tal7aouy.icons",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
