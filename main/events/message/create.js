@@ -16,20 +16,17 @@ class MessageCreate extends Event {
 
     if (!prefixUsed) return
 
-    const match = message.content.match(/^\?(\S+)\s*([\s\S]*)$/)
-    if (!match) return
+    const raw = message.content.substring(prefixUsed.length).trim()
 
-    const [, rawCommand, ...args] = match
-    const cmd = this.client.getPrefixCommands().find((v, k) => k === rawCommand)
-
+    const cmd = this.client.getPrefixCommands().find((v, k) => k === raw)
     if (!cmd) return message.reply('Invalid command.')
+    const key = raw
+    const args = message.content.substring(key?.length).split(' ').slice(1)
+
     cmd.options.permissions?.member?.forEach((perm) => {
       if (!message.member?.permissionsIn(message.channelId).has(perm))
         return message.reply(
-          "You didn't have permission to use this command. (`{}`)".replace(
-            '{}',
-            perm.toString()
-          )
+          `You didn't have permission to use this command. (\`${perm}\`)`
         )
     })
 
@@ -40,26 +37,19 @@ class MessageCreate extends Event {
           .has(perm)
       )
         return message.reply(
-          "Bot didn't have permission to execute this command. (`{}`)".replace(
-            '{}',
-            perm.toString()
-          )
+          `I didn't have permission to execute this command. (\`${perm}\`)`
         )
     })
 
-    if (cmd.options.arguments.min <= args.length) {
+    if (cmd.options.arguments?.min < args.length) {
       return message.reply(
-        'Minimum arguments is {1} but received {2}'
-          .replace('{1}', cmd.options.arguments.min.toString())
-          .replace('{2}', args.length.toString())
+        `Minimum arguments is \`${cmd.options.arguments.min}\`, received \`${args.length}\``
       )
     }
 
-    if (cmd.options.arguments.max >= args.length) {
+    if (cmd.options.arguments?.max < args.length) {
       return message.reply(
-        'Maximum arguments is {1} but received {2}'
-          .replace('{1}', cmd.options.arguments.min.toString())
-          .replace('{2}', args.length.toString())
+        `Maximum arguments is \`${cmd.options.arguments.max}\`, received \`${args.length}\``
       )
     }
 
