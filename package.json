@@ -17,7 +17,7 @@
   "author": "hvlxh",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.1.4",
+    "@types/node": "^20.4.2",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
