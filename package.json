@@ -1,33 +1,35 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "A advanced template with eslint + prettier",
-  "main": "source/app.js",
+  "name": "djs-template",
+  "version": "2.0.0",
+  "description": "An template for discord.js in javascript",
+  "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "lint:check": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "build": "npm run lint:check && npm run format:check",
-    "build:fix": "npm run lint:fix && npm run format:fix",
-    "dev": "nodemon .",
-    "test": "npm run build:fix"
+    "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "hvlxh",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^20.6.5",
-    "eslint": "^8.48.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "nodemon": "^3.0.1",
-    "prettier": "^3.0.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hvlxh/djs-template.git"
   },
+  "author": "hvlxh / default27",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hvlxh/djs-template/issues"
+  },
+  "homepage": "https://github.com/hvlxh/djs-template#readme",
   "dependencies": {
-    "@types/dotenv": "^8.2.0",
-    "chalk": "^5.3.0",
-    "discord.js": "^14.12.1",
-    "dotenv": "^16.3.1"
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.9"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "3.0.3"
   }
 }
