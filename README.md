@@ -1,4 +1,4 @@
-# djs-framework
+# djs-template
 
 An discordjs framework to create commands in most efficient way!
 
