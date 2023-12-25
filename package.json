@@ -27,7 +27,7 @@
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
-    "glob": "^10.3.9"
+    "glob": "^10.3.10"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
